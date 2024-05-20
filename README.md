@@ -54,4 +54,3 @@ Feel free to fork this repository, submit pull requests, and suggest improvement
 ---
 
 Thank you for visiting my Project Euler solutions repository! I hope you find these solutions helpful and inspiring.
-
