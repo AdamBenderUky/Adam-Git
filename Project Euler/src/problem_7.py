@@ -23,7 +23,15 @@ def nth_prime(n):
             count += 1
     return candidate
 
+def get_ordinal_suffix(n):
+    if 10 <= n % 100 <= 20:
+        return "th"
+    else:
+        suffixes = {1: "st", 2: "nd", 3: "rd"}
+        return suffixes.get(n % 10, "th")
+
 if __name__ == "__main__":
-    n = 10001
+    n = 13
     result = nth_prime(n)
-    print(f"The {n}st prime number is {result}")
+    suffix = get_ordinal_suffix(n)
+    print(f"The {n}{suffix} prime number is {result}")
