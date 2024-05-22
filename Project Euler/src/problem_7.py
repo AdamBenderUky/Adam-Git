@@ -31,7 +31,7 @@ def get_ordinal_suffix(n):
         return suffixes.get(n % 10, "th")
 
 if __name__ == "__main__":
-    n = 13
+    n = 10001
     result = nth_prime(n)
     suffix = get_ordinal_suffix(n)
     print(f"The {n}{suffix} prime number is {result}")
