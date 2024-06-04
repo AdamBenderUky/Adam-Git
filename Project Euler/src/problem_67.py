@@ -16,7 +16,7 @@ def max_path_sum(triangle):
     return triangle[0][0]
 
 if __name__ == "__main__":
-    file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'triangle_18.txt')
+    file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'triangle_67.txt')
     triangle = read_triangle(file_path)
     result = max_path_sum(triangle)
     print("The maximum total from top to bottom is:", result)
