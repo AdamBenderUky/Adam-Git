@@ -1,12 +1,10 @@
-# problem_17.py
-
 def number_to_words(n):
     if n == 0:
         return "zero"
     
     units = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-    tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+    teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+    tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
     thousands = ["", "thousand"]
 
     def _convert_hundred(num):
@@ -16,7 +14,7 @@ def number_to_words(n):
             num %= 100
             if num > 0:
                 word += " and "
-        if 10 < num < 20:
+        if 10 <= num < 20:
             word += teens[num - 10]
         else:
             if num >= 20:
@@ -26,7 +24,7 @@ def number_to_words(n):
                     word += "-" + units[num]
             else:
                 word += units[num]
-        return word
+        return word.strip()
     
     words = ""
     if n >= 1000:
